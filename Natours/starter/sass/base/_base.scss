@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* default browser root font-size is 16px */
+    font-size: 62.5%; /* % of browser font size 10px */
+}
+
+
+
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+}
