@@ -1,0 +1,9 @@
+@mixin clear-fix {
+    // This mixin fixes the issue of collapsing float boxes
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
