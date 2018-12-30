@@ -5,8 +5,6 @@
     height: 50rem;
 
     &__side {
-        color: white;
-        
         height: 50rem;
         font-size: 3rem;
         transition: all 0.8s ease;
@@ -16,6 +14,7 @@
         left: 0;
         backface-visibility: hidden;
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1rem 2rem rgba($colour-grey-dark, 0.15);
 
         &--front {
@@ -23,7 +22,7 @@
         }
 
         &--back {
-            transform: rotateY(-180deg);
+            transform: rotateY(-180deg);            
             &-1 {
                 background-image: linear-gradient(to right bottom, $colour-secondary-dark, $colour-secondary-light);
             }
@@ -42,6 +41,92 @@
 
     &:hover &__side--back{
         transform: rotateY(0deg);
+    }
+
+
+    // Front side styling:
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1 {
+            background-image:
+                linear-gradient(
+                    to right bottom,
+                    $colour-secondary-dark,
+                    $colour-secondary-light
+                ), url('../../img/nat-5.jpg');
+        }
+        &--2 {
+            background-image: url('../../img/nat-5.jpg');
+        }
+        &--3 {
+            background-image: url('../../img/nat-5.jpg');
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $colour-white;
+        width: 60%; // to force into two lines
+        text-align: right;
+
+        display: inline-block;
+        padding: 0 0.2em;
+        position: absolute;
+        top: 12rem;
+        right: 1rem;
+    }
+
+    &__heading-span {
+        padding: 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($colour-secondary-dark, 0.85),
+                rgba($colour-secondary-light, 0.85)
+            );
+        }
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($colour-primary-dark, 0.85),
+                rgba($colour-primary-light, 0.85)
+            );
+        }
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($colour-tertiary-dark, 0.85),
+                rgba($colour-tertiary-light, 0.85)
+            );
+        }
+    }
+
+    &__details {
+        padding: 0.5em;
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            width: 80%;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:not(:last-child) {
+                    border-bottom: 1px solid $colour-grey-light2;
+                }
+                
+            }
+        }
     }
 }
 
