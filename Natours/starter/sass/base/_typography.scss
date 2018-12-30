@@ -45,7 +45,7 @@ body {
     transition-duration: 0.2s;
 
     &:hover {
-        transform: skewY(4deg) skewX(15deg);
+        transform: skewY(3deg) skewX(15deg);
         text-shadow: 0.5rem 1rem 2rem rgba($colour-black, 0.2);
     }
 }

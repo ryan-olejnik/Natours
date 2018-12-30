@@ -82,11 +82,14 @@ body {
   transition-property: all;
   transition-duration: 0.2s; }
   .heading-secondary:hover {
-    transform: skewY(4deg) skewX(15deg);
+    transform: skewY(3deg) skewX(15deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.utility-center-text {
+.u-center-text {
   text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -159,7 +162,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #e2e2e2;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -168,7 +170,6 @@ body {
     display: table;
     clear: both; }
   .row [class^='col-'] {
-    background-color: orangered;
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
