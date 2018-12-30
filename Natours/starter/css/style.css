@@ -82,7 +82,7 @@ body {
   transition-property: all;
   transition-duration: 0.2s; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg);
+    transform: skewY(2deg) skewX(10deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -117,6 +117,7 @@ body {
   margin-top: -20rem;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
   background-size: cover;
+  -webkit-clip-path: polygon(0 18rem, 100% 0, 100% calc(100% - 18rem), 0 100%);
   clip-path: polygon(0 18rem, 100% 0, 100% calc(100% - 18rem), 0 100%); }
 
 .section-tours {
@@ -240,7 +241,6 @@ body {
   position: relative;
   height: 50rem; }
   .card__side {
-    color: white;
     height: 50rem;
     font-size: 3rem;
     transition: all 0.8s ease;
@@ -250,6 +250,7 @@ body {
     left: 0;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(119, 119, 119, 0.15); }
     .card__side--front {
       background-color: white; }
@@ -265,12 +266,78 @@ body {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ff7730, #ffb900), url("../../img/nat-5.jpg"); }
+    .card__picture--2 {
+      background-image: url("../../img/nat-5.jpg"); }
+    .card__picture--3 {
+      background-image: url("../../img/nat-5.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    width: 60%;
+    text-align: right;
+    display: inline-block;
+    padding: 0 0.2em;
+    position: absolute;
+    top: 12rem;
+    right: 1rem; }
+  .card__heading-span {
+    padding: 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 119, 48, 0.85), rgba(255, 185, 0, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.85), rgba(126, 213, 111, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(84, 66, 250, 0.85), rgba(41, 152, 255, 0.85)); }
+  .card__details {
+    padding: 0.5em; }
+    .card__details ul {
+      margin: 0 auto;
+      list-style: none;
+      width: 80%; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center; }
+  .card__pricebox {
+    color: white;
+    margin-bottom: 6rem;
+    text-align: center; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 200; }
+  .card__book-now {
+    font-size: 2rem; }
 
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   .header__logo-box {

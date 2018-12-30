@@ -128,5 +128,36 @@
             }
         }
     }
+
+    // Back side styling:
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+    }
+
+    &__pricebox {
+        color: $colour-white;
+        margin-bottom: 6rem;
+        text-align: center;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 200;
+    }
+
+    &__book-now {
+        font-size: 2rem;
+    }
+
 }
 
