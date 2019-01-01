@@ -27,6 +27,8 @@
     
     &__image {
         height: 100%;
+        transform: translateX(-3.5rem) scale(1.4);
+        transition: all 0.5s;
     }
 
     &__caption {
@@ -43,12 +45,18 @@
         backface-visibility: hidden; // fix glitch where text will jump to the right ~1px at the end of the transition
     }
 
+    &__text {
+        transform: skewX(15deg); // reverse story skew
+    }
+
     &:hover &__caption {
         transform: translate(-50%, -50%);
         opacity: 1;
     }
 
-    &__text {
-        transform: skewX(15deg); // reverse story skew
+    &:hover &__image {
+        transform: translateX(-3.5rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
+
 }

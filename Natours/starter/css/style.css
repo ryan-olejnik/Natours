@@ -376,7 +376,9 @@ body {
     transform: translateX(-3rem) skewX(15deg);
     position: relative; }
   .story__image {
-    height: 100%; }
+    height: 100%;
+    transform: translateX(-3.5rem) scale(1.4);
+    transition: all 0.5s; }
   .story__caption {
     position: absolute;
     color: white;
@@ -389,11 +391,14 @@ body {
     opacity: 0;
     transition: all 0.5s;
     backface-visibility: hidden; }
+  .story__text {
+    transform: skewX(15deg); }
   .story:hover .story__caption {
     transform: translate(-50%, -50%);
     opacity: 1; }
-  .story__text {
-    transform: skewX(15deg); }
+  .story:hover .story__image {
+    transform: translateX(-3.5rem) scale(1);
+    filter: blur(3px) brightness(80%); }
 
 .header {
   height: 95vh;
