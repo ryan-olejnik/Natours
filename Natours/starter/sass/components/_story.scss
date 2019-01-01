@@ -8,7 +8,8 @@
     padding-left: 9rem; // since shape is translated 3rem to the left
 
     font-size: $default-font-size;
-    // overflow: auto;
+    transform: skewX(-15deg);
+
 
     &__shape {
         width: 15rem;
@@ -20,10 +21,34 @@
         
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        transform: translateX(-3rem);
+        transform: translateX(-3rem) skewX(15deg); // move to left (away from text), AND reverse story skew
+        position: relative;
     }
     
     &__image {
-        height: 100%
+        height: 100%;
+    }
+
+    &__caption {
+        position: absolute;
+        color: $colour-white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        opacity: 0;
+        transition: all 0.5s;
+        backface-visibility: hidden; // fix glitch where text will jump to the right ~1px at the end of the transition
+    }
+
+    &:hover &__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &__text {
+        transform: skewX(15deg); // reverse story skew
     }
 }
