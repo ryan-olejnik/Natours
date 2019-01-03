@@ -28,3 +28,27 @@
     position: relative;
     padding: 10rem 0;
 }
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right, $colour-primary-light, $colour-primary-dark);
+}
+
+.book {
+    background-image: linear-gradient(
+        105deg,
+        rgba($colour-white, 0.9) 50%,
+        transparent 50%,
+    ), url('../../img/nat-10.jpg');
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($colour-black, 0.15);
+
+
+    height: 50rem; // TEMP TO FORCE HEIGHT
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
