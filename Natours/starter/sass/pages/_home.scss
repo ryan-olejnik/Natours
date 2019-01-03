@@ -12,7 +12,7 @@
         rgba($colour-primary-light, 0.8),
         rgba($colour-primary-dark, 0.8)
     ),
-    url('../../img/nat-4.jpg');
+    url('../img/nat-4.jpg');
     background-size: cover;
     -webkit-clip-path: polygon(0 18rem, 100% 0, 100% calc(100% - 18rem), 0 100%);
     clip-path: polygon(0 18rem, 100% 0, 100% calc(100% - 18rem), 0 100%);
