@@ -1,0 +1,50 @@
+.footer {
+    background-color: $colour-grey-dark-3;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    &__logo {
+        height: 15rem;
+    }
+
+    &__navigation {
+        margin-left: 3rem;
+        display: inline-block;
+    }
+
+    &__list {
+        list-style: none;
+        border-top: 1px solid white;
+        text-align: left;
+
+    }
+
+    &__item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $colour-grey-light1;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            color: $colour-primary;
+
+        }
+    }
+
+    
+}
