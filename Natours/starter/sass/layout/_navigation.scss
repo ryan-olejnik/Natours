@@ -1,0 +1,87 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $colour-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        right: 6rem;
+        top: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        right: 6.5rem;
+        top: 6.5rem;
+        background-image: radial-gradient($colour-primary-light, $colour-primary-dark);
+        z-index: 1000;
+
+        transform: scale(70);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3000;
+    }
+
+    &__list {
+        list-style: none;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        
+        
+    }
+
+    &__link {
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform  : uppercase;
+        color: $colour-white;
+        text-decoration: none;
+        background-image: linear-gradient(
+            120deg,
+            transparent 50%,
+            $colour-white 50%
+        );
+        background-size: 70rem;
+        transition: all 0.3s;
+        background-position-x: 0px;
+
+        
+
+        &:hover {
+            background-position-x: -38rem;
+            color: $colour-primary;
+        }
+
+        span {
+            margin-right: 1.5rem; 
+            display: inline-block;
+        }
+
+
+    }
+}

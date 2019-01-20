@@ -572,3 +572,65 @@ body {
     text-decoration: none; }
   .footer__link:hover, .footer__link:active {
     color: #55c57a; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  right: 6rem;
+  top: 6rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 6.5rem;
+  top: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transform: scale(70); }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3000; }
+
+.navigation__list {
+  list-style: none;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 1rem; }
+
+.navigation__link {
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, transparent 50%, white 50%);
+  background-size: 70rem;
+  transition: all 0.3s;
+  background-position-x: 0px; }
+  .navigation__link:hover {
+    background-position-x: -38rem;
+    color: #55c57a; }
+  .navigation__link span {
+    margin-right: 1.5rem;
+    display: inline-block; }
