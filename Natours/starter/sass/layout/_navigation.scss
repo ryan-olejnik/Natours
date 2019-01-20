@@ -3,6 +3,18 @@
         display: none;
     }
 
+
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(70);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+
     &__button {
         background-color: $colour-white;
         height: 7rem;
@@ -11,7 +23,8 @@
         right: 6rem;
         top: 6rem;
         border-radius: 50%;
-        z-index: 2000;
+        z-index: 5000;
+        box-shadow: 0 1rem 3rem rgba($colour-black, 0.1);
     }
 
     &__background {
@@ -24,7 +37,8 @@
         background-image: radial-gradient($colour-primary-light, $colour-primary-dark);
         z-index: 1000;
 
-        transform: scale(70);
+        transition: transform 0.5s cubic-bezier(.95,.01,.01,1);
+
     }
 
     &__nav {
@@ -32,8 +46,13 @@
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 3000;
+
+        opacity: 0;
+        width: 0;
+
+        transition: all 1s cubic-bezier(.73,-0.34,.25,1.37);
     }
 
     &__list {
@@ -50,8 +69,6 @@
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
-        
-        
     }
 
     &__link {
@@ -81,7 +98,5 @@
             margin-right: 1.5rem; 
             display: inline-block;
         }
-
-
     }
 }
